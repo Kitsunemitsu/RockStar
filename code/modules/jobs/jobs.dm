@@ -299,6 +299,7 @@ GLOBAL_LIST_INIT(mordinos_positions, list(
 
 GLOBAL_LIST_INIT(bishops_positions, list(
 	"Bishops Boss",
+	"Bishops Consigliere",
 	"Bishops Underboss",
 	"Bishops Capo",
 	"Bishops Soldier",

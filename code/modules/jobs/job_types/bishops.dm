@@ -58,8 +58,8 @@
 	department_flag = BISHOPS
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Mordino Boss"
-	description = "You are the underboss of the Bishop family. Your role may vary from a simple consigliere, to a diplomat with the other families, to assigning soldiers to the capos, or even as the chief supervisor of the family casino; keep the dialogue with the boss constant and clear to know what he needs from you. In a world where treason is treated as common currency, a position such as a 'right hand man' for the boss is extremely valuable... nevertheless, should the boss be unable to lead the family, the job will fall unto you."
+	supervisors = "Bishops Boss"
+	description = "You are the underboss of the Bishop family. Your role may vary from a diplomat with the other families, to assigning soldiers to the capos, or even as the chief supervisor of the family casino; keep the dialogue with the boss constant and clear to know what he needs from you. In a world where treason is treated as common currency, a position such as a 'right hand man' for the boss is extremely valuable... nevertheless, should the boss be unable to lead the family, the job will fall unto you."
 	selection_color = "#7C93AF"
 	exp_requirements = EXP_TYPE_BISHOPS
 
@@ -102,6 +102,61 @@
 	suit =/obj/item/clothing/suit/armor/f13/reno/bulletproof
 	uniform = /obj/item/clothing/under/f13/bishops/officer
 	belt = /obj/item/gun/ballistic/revolver/m29
+//	backpack_contents = list(
+//		/obj/item/ammo_box/m44 = 1,
+//		/obj/item/storage/bag/money/small/ncr = 1,
+//		)
+
+/*--------------------------------------------------------------*/
+
+/datum/job/bishops/f13consigliere
+	title = "Bishops Consigliere"
+	flag = F13BISHOPSUNDERBOSS
+	department_flag = BISHOPS
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "Bishops Boss"
+	description = "You are the treasurer and and advisor to the Bishops. You have a lot of funds at your disposal, and can use them as needed. Run diplomacy, assist the Underboss and Boss in their dealings. You're not a frontline soldier, just a simple advisor."
+	selection_color = "#7C93AF"
+	exp_requirements = EXP_TYPE_BISHOPS
+
+	outfit = /datum/outfit/job/bishops/f13consigliere
+/*
+	loadout_options = list(
+	/datum/outfit/loadout/pr,
+	/datum/outfit/loadout/pw,
+	)
+
+	access = list(ACCESS_BAR, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/oasis,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/oasis,
+		),
+	)
+*/
+/datum/outfit/job/bishops/f13consigliere
+	name = "Consigliere"
+	jobtype = /datum/job/bishops/f13consigliere
+
+	//ears =
+	id = /obj/item/card/id/reno/bishops/ring/officer
+	glasses = /obj/item/clothing/glasses/sunglasses
+	//gloves =
+	backpack = /obj/item/storage/backpack/satchel
+	satchel = /obj/item/storage/backpack/satchel
+//	r_hand =
+	//l_hand =
+	l_pocket = /obj/item/storage/bag/money/small/reno/cap/onefivezero
+	r_pocket = /obj/item/stack/f13Cash/caps/threefivezero
+	mask = /obj/item/clothing/mask/cigarette/cigar/ncr
+	head = /obj/item/clothing/head/helmet/f13/bishops/fedora
+	shoes = /obj/item/clothing/shoes/laceup
+	suit =/obj/item/clothing/suit/armor/f13/reno/bulletproof
+	uniform = /obj/item/clothing/under/f13/bishops/officer
 //	backpack_contents = list(
 //		/obj/item/ammo_box/m44 = 1,
 //		/obj/item/storage/bag/money/small/ncr = 1,
